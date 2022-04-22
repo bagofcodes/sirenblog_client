@@ -35,7 +35,7 @@ export default function Register() {
                 fd.append("youtubeid",youtubeid);
                 fd.append("password",password);
                 fd.append("profilepic",file);
-                const res = await axios.post("/api/auth/register",fd);
+                const res = await axios.post("https://sirenappblog.herokuapp.com/api/auth/register",fd);
                 setLoading(false);
                 if(res.data.error){
                     alert(res.data.error);

@@ -25,11 +25,11 @@ export default function SinglePostPage(props) {
     useEffect(()=>{
         const getPosts = async ()=>{
             setisFetched(true);
-            const res = await axios.get(`/api/posts/singlePost/${postId.postId}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
+            const res = await axios.get(`https://sirenappblog.herokuapp.com/api/posts/singlePost/${postId.postId}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
             setPosts(res.data);
             setlikeccount(res.data.likes.length);
-            const userdata = await axios.get(`/api/users/byUsername/${authstate.username}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
-            const authordata = await axios.get(`/api/users/byUsername/${res.data.username}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
+            const userdata = await axios.get(`https://sirenappblog.herokuapp.com/api/users/byUsername/${authstate.username}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
+            const authordata = await axios.get(`https://sirenappblog.herokuapp.com/api/users/byUsername/${res.data.username}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
             setAuthor(authordata.data);
             
             const intersection = (res.data.likes).filter(e=>(userdata.data.likes).includes(e));
@@ -51,13 +51,13 @@ export default function SinglePostPage(props) {
   const togglelike= async ()=>{
     if(liked === false){
       setLike(true);
-      const likeit = await axios.post("/api/likes",{username: authstate.username, postId: posts._id},{headers:{accessToken: localStorage.getItem("accessToken")}});
+      const likeit = await axios.post("https://sirenappblog.herokuapp.com/api/likes",{username: authstate.username, postId: posts._id},{headers:{accessToken: localStorage.getItem("accessToken")}});
       setlikeccount(likecount+1);
       setLikeId(likeit.data._id); 
     }
     else{
       setLike(false);
-      await axios.delete(`/api/likes/${authstate.username}/${posts._id}/${likeid}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
+      await axios.delete(`https://sirenappblog.herokuapp.com/api/likes/${authstate.username}/${posts._id}/${likeid}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
       setlikeccount(likecount-1);
       setLikeId("");
     }

@@ -22,7 +22,7 @@ function App() {
   useEffect(()=>{
     const setstate = () =>{
       try{
-        const res =async ()=> await axios.get("/api/auth/verify", {
+        const res =async ()=> await axios.get("https://sirenappblog.herokuapp.com/api/auth/verify", {
           headers: {
             accessToken: localStorage.getItem("accessToken")
           }

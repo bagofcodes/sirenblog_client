@@ -15,12 +15,12 @@ export default function PostContainer(props) {
     var loc=useLocation();
 
     const getPosts = async ()=>{
-        const res = await axios.get("/api/posts/latest", {headers:{accessToken: localStorage.getItem("accessToken")}});
+        const res = await axios.get("https://sirenappblog.herokuapp.com/api/posts/latest", {headers:{accessToken: localStorage.getItem("accessToken")}});
         setPosts(res.data);
         setisFetched(false);
     }
     const getPostscat = async ()=>{
-        const res = await axios.get(`/api/posts/byCategory/${category}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
+        const res = await axios.get(`https://sirenappblog.herokuapp.com/api/posts/byCategory/${category}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
         setPosts(res.data);
         setisFetched(false);
     }

@@ -20,7 +20,7 @@ export default function Login() {
             var fd = new FormData();
             fd.append("username",username);
             fd.append("password",password);
-            var res = await axios.post("/api/auth/login",fd);
+            var res = await axios.post("https://sirenappblog.herokuapp.com/api/auth/login",fd);
             if(res.data.error){
                 setLoading(false);
                 alert(res.data.error);

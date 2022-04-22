@@ -12,7 +12,7 @@ export default function PostsSidebar() {
 
     useEffect(()=>{
         const getPosts = async ()=>{
-            const res = await axios.get("/api/posts/topPosts", {headers:{accessToken: localStorage.getItem("accessToken")}});
+            const res = await axios.get("https://sirenappblog.herokuapp.com/api/posts/topPosts", {headers:{accessToken: localStorage.getItem("accessToken")}});
             setPosts(res.data);
             setisFetched(false);
         }

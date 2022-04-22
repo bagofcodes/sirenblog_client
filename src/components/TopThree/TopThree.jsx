@@ -13,13 +13,13 @@ export default function TopThree(Props) {
     useEffect(()=>{
         const getPosts = async ()=>{
             setisFetched(true);
-            const res = await axios.get("/api/posts/latest", {headers:{accessToken: localStorage.getItem("accessToken")}});
+            const res = await axios.get("https://sirenappblog.herokuapp.com/api/posts/latest", {headers:{accessToken: localStorage.getItem("accessToken")}});
             await setPosts(res.data);
             setisFetched(false);
         }
         const getRPosts = async()=>{
             setisFetched(true);
-            const res = await axios.get(`/api/posts/related/${cat}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
+            const res = await axios.get(`https://sirenappblog.herokuapp.com/api/posts/related/${cat}`, {headers:{accessToken: localStorage.getItem("accessToken")}});
             await setPosts(res.data);
             setisFetched(false);
     

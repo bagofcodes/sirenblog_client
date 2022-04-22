@@ -11,7 +11,7 @@ export default function VerticalGallery() {
 
     useEffect(()=>{
         const getPosts = async ()=>{
-            const res = await axios.get("/api/posts/", {headers:{accessToken: localStorage.getItem("accessToken")}});
+            const res = await axios.get("https://sirenappblog.herokuapp.com/api/posts/", {headers:{accessToken: localStorage.getItem("accessToken")}});
             setPosts(res.data);
             setisFetched(false);
         }
