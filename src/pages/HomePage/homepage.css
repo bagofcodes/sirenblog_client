@@ -1,0 +1,12 @@
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 800px){
+    hr{
+        display: none;
+    }
+}

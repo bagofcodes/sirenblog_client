@@ -1,0 +1,33 @@
+.headings{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex-direction: column;
+}
+.headingText{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+.headlingLine{
+    width: 60px;
+    height: 5px;
+    border-top: 4px solid #F08080;
+    margin-top: 8px;
+    border-radius: 10px;
+
+}
+
+@media only screen and (max-width: 1000px){
+    .headings{
+        width: 100%;
+        margin-left: 20px;
+    }
+
+}

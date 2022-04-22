@@ -1,0 +1,117 @@
+.topBarOuter{
+    width: 100%;
+    height: 150px;
+    top: 0px;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    z-index: 9999;
+    font-family: 'Montserrat', sans-serif;
+}
+.headingContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: baseline;
+}
+.firstText{
+    
+    font-size: 25px;
+    font-weight: 400;
+    transform: rotate(-90deg);
+    display: inline-block;
+    /* border: 1px solid black; */
+}
+.secondText{
+    font-size: 60px;
+    font-weight: 700;
+    padding: 0px;
+    /* border: 1px solid black; */
+    margin-left: -20px;
+}
+.optionsContainer{
+    width: 80%;
+    border-bottom: 2px solid lightgray;
+    height: 30%;
+
+}
+.optionsContainer i{
+    display: none;
+}
+
+.optionsContainer #hidden{
+    display: flex;
+}
+.topList{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.topListItems{
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .topBarOuter{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid lightsalmon;
+        height: 80px;
+        width: 100%;
+    }
+    .headingContainer{
+        width: 30%;
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    .headingContainer .firstText{
+        font-size: 15px;
+        margin-right: 8px;
+    }
+    .headingContainer .secondText{
+        font-size: 35px;
+
+    }
+    .optionsContainer{
+        display: flex;
+        width: 10%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: row;
+        border-bottom: none ;
+    }
+    .optionsContainer i{
+        font-size: 30px;
+        display: flex;
+    }
+    .optionsContainer .topList{
+        display: none;
+    }
+    .optionsContainer #hidden{
+        position: absolute;
+        left: 0px;
+        top: 70px;
+        height: 250px;
+        width: 90%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        opacity: 0.95;
+    }
+    .topListItems{
+        border-bottom: 2px solid lightgray;
+        font-size: 15px;
+    }
+    .icon-ham{
+        color: lightsalmon;
+    }
+}

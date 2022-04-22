@@ -1,0 +1,86 @@
+.outer-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.card-container{
+    border: 2px solid lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.colz{
+    display: flex;
+    justify-content: space-between;
+}
+.author-container{
+    width: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.author-img img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.author-container span{
+    font-family: "Montserrat", sans-serif;
+    margin-left: 10px;
+}
+.colz-icon{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.colz .colz-icon i {
+    color: blue;
+    padding: 8px;
+    padding-left: 0px;
+    font-size: 25px;
+}
+h1{
+    font-size: 35px;
+    font-family: "Montserrat";
+}
+p{
+    font-size: 15px;
+    font-family: "Fira";
+    font-weight: 300;
+}
+.cat-container span{
+    margin-right: 10px;
+}
+#cat{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+.colz-likes .colz-likes-icon{
+    margin-right: 10px;
+    font-size: 30px;
+    color: blue;
+    cursor: pointer;
+}
+.colz-likes span{
+    font-size: larger;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 800px){
+    .card-container{
+        width: 90%;
+    }
+    h1{
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,80 @@
+.outerContainerSS{
+    display: flex;
+    width: 80%;
+    height: 1400px;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.largerSection{
+    display: flex;
+    flex: 7;
+    flex-direction: column;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.smallerSection{
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bigContainerVg{
+    flex: 7;
+    /* border: 1px solid black; */
+    position: relative;
+    margin: 5px;
+    margin-top: 100px;
+    width: 100%;
+    height: 30%;
+    cursor: pointer;
+}
+.imgBigVg{
+    border-radius: 5px;
+    /* object-fit: cover; */
+    width: 100%;
+    height: 95%;
+    z-index: -2;
+}
+.vgTitlem{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    left: 30%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(0,0,0,0.4);
+    padding: 2px;
+}
+.vgSubTitlem{
+    position: absolute;
+    z-index: 999;
+    top: 68%;
+    color: white;
+    left: 40%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    opacity: 0.6;
+    font-weight: 600;
+    background-color: rgba(0,0,0,0.4);
+    padding: 2px;
+}
+
+@media only screen and (max-width: 1000px){
+    .outerContainerSS{
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+    }
+    .bigContainerVg{
+        display: none;
+    }
+}

@@ -1,0 +1,84 @@
+.fpostCont{
+    width: 33%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.fpostTitle{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    cursor: pointer;
+}
+.fpostdesc{
+    width: 80%;
+    height: 58px;
+    /* border: 1px solid black; */
+    color: #908D8D;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin-top: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */ 
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+}
+.fPostf{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 80%;
+}
+.fPostfct{
+    color: #404040;
+    font-size: 12px;
+    font-weight: 900;
+    margin-right: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+.fPostfdt{
+    color: #404040;
+    font-size: 12px;
+    font-weight: 900;
+    opacity: 0.5;
+}
+@media only screen and (max-width: 1000px){
+    .fpostTitle{
+        width: 100%;
+        font-size: 18px;
+    }
+    .fpostdesc{
+        width: 100%;
+    }
+    .fPostf{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    .fpostCont{
+        width: 100%;
+        align-items: flex-start;
+        padding: 0px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid lightgray;
+    }
+    .fpostTitle{
+        font-size: 20px;
+        width: 100%;
+    }
+    .fpostdesc{
+        width: 100%;
+    }
+
+}
